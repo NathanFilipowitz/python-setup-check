@@ -7,9 +7,9 @@ result = None
 
 def main():
 
-    ask_user_input();
-    result = calculate(operand1, operator, operand2);
-    display_result(result);
+    ask_user_input()
+    result = calculate(operand1, operator, operand2)
+    display_result(result)
 
 def ask_user_input():
     # Get first operand from the user
@@ -29,14 +29,18 @@ def calculate(num1, op, num2):
     global operand1, operator, operand2, result
     if operator == '+':
         result = operand1 + operand2
+        return result
     elif operator == '-':
         result = operand1 - operand2
+        return result
     elif operator == '*':
         result = operand1 * operand2
+        return result
     elif operator == '/':
         if operand2 == 0:
             print("Error: Division by zero is undefined.")
         result = operand1 / operand2
+        return result
     else:
         print("Invalid operator.")
 
