@@ -27,22 +27,22 @@ def ask_user_input():
 def calculate(num1, op, num2):
     # Perform the operation based on the operator
     global operand1, operator, operand2, result
-    if operator == '+':
-        result = operand1 + operand2
-        return result
-    elif operator == '-':
-        result = operand1 - operand2
-        return result
-    elif operator == '*':
-        result = operand1 * operand2
-        return result
-    elif operator == '/':
-        if operand2 == 0:
-            print("Error: Division by zero is undefined.")
-        result = operand1 / operand2
-        return result
-    else:
-        print("Invalid operator.")
+    match operator:
+        case '+':
+            result = num1 + num2
+            return result
+        case "-":
+            result = num1 - num2
+            return result
+        case "*":
+            result = num1 * num2
+            return result
+        case "/":
+            result = num1 / num2
+            return result
+        case "_":
+            print("invalid operator")
+
 
 def display_result(res):
     # Print the result
