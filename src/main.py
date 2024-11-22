@@ -42,7 +42,6 @@ def calculate(num1, op, num2):
             return res
         case "_":
             print("invalid operator")
-    return res
 
 def display_result(result):
     # Print the result
