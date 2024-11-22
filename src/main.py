@@ -3,7 +3,6 @@ from logging import NullHandler
 operand1 = None
 operator = None
 operand2 = None
-result = None
 
 def main():
 
@@ -26,28 +25,28 @@ def ask_user_input():
 
 def calculate(num1, op, num2):
     # Perform the operation based on the operator
-    global operand1, operator, operand2, result
-    match operator:
-        case '+':
-            result = num1 + num2
-            return result
+    match op:
+        case "+":
+            res = num1 + num2
+            return res
         case "-":
-            result = num1 - num2
-            return result
+            res = num1 - num2
+            return res
         case "*":
-            result = num1 * num2
-            return result
+            res = num1 * num2
+            return res
         case "/":
-            result = num1 / num2
-            return result
+            if num2 == 0:
+                print("Cannot divide by zero")
+            res = num1 / num2
+            return res
         case "_":
             print("invalid operator")
+    return res
 
-
-def display_result(res):
+def display_result(result):
     # Print the result
-    global result
-    print("Result:", res)
+    print("Result:", result)
 
 
 # Call the main function to run the program
